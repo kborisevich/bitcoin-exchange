@@ -1,0 +1,25 @@
+{
+  "name": "bitcoin-price-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kborisevich/bitcoin-price-microservice.git"
+  },
+  "author": "Kiryl Barysevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kborisevich/bitcoin-price-microservice/issues"
+  },
+  "homepage": "https://github.com/kborisevich/bitcoin-price-microservice#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
