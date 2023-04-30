@@ -60,9 +60,9 @@ app.get('/', async (req, res) => {
   const { bidPrice, askPrice, midPrice } = await getQuote();
 
   res.json({
-    bid: bidPrice.toFixed(2),
-    ask: askPrice.toFixed(2),
-    mid: midPrice.toFixed(2),
+    bid: bidPrice,
+    ask: askPrice,
+    mid: midPrice,
   });
 });
 
