@@ -57,13 +57,19 @@ const getQuote = async () => {
 };
 
 app.get('/', async (req, res) => {
-  const { bidPrice, askPrice, midPrice } = await getQuote();
+  try {
+    const { bidPrice, askPrice, midPrice } = await getQuote();
 
-  res.json({
-    bid: bidPrice,
-    ask: askPrice,
-    mid: midPrice,
-  });
+    res.json({
+      bid: bidPrice,
+      ask: askPrice,
+      mid: midPrice,
+    });
+  } catch(error) {
+    console.log(error);
+
+    res.status(500).send('Something went wrong');
+  }
 });
 
 app.listen(httpPort, () => {
